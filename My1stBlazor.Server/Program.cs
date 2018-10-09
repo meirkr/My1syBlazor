@@ -13,6 +13,7 @@ namespace My1stBlazor.Server
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseUrls("http://localhost:5001") // TODO: why isn't it working? maybe in Prod mode?
                 .UseConfiguration(new ConfigurationBuilder()
                     .AddCommandLine(args)
                     .Build())
